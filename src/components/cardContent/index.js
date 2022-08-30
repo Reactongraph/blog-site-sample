@@ -1,11 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ProfileContent({ postContent }) {
-  const {
-    title, detail, image,
-    description, viewCount
-  } = postContent;
+const ProfileContent = ({ postContent }) => {
+  const { title, detail, image, description, viewCount } = postContent;
   return (
     <>
       <div className="cardBody">
@@ -17,15 +14,14 @@ function ProfileContent({ postContent }) {
         <div className="bodyImg">
           <img src={image} alt="img" />
           <div className="viewbtn">
-            <i className="fa fa-eye"></i>{" "}
+            <i className="fa fa-eye"></i>
             <span className="countView">{viewCount}</span>
           </div>
         </div>
       </div>
     </>
   );
-}
-
+};
 
 ProfileContent.propTypes = {
   postContent: PropTypes.object,

@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ProfileFooter({ comments }) {
+const ProfileFooter = ({ comments }) => {
   return (
     <>
       <div className="cardFooter">
         <ul className="sharingNav">
           <li>
             <a href="/" className="sharingContentBox">
-              <i className="fa fa-comments"></i> <span>{comments} comments</span>
+              <i className="fa fa-comments"></i>{" "}
+              <span>{comments} comments</span>
             </a>
           </li>
           <li>
@@ -23,7 +24,7 @@ function ProfileFooter({ comments }) {
       </div>
     </>
   );
-}
+};
 
 ProfileFooter.propTypes = {
   comments: PropTypes.number,

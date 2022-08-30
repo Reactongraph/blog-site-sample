@@ -1,6 +1,6 @@
 import React from "react";
 
-function cardLoader() {
+const cardLoader=()=> {
   return (
     <>
       <div className="loader" key={0}>

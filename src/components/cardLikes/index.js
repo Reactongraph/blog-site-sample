@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function Likes(props) {
+const Likes = (props) => {
   const { handleLikeUnlike, totalLikesCount } = props;
   return (
     <>
@@ -28,7 +28,7 @@ function Likes(props) {
       </div>
     </>
   );
-}
+};
 
 Likes.propTypes = {
   handleLikeUnlike: PropTypes.func,
