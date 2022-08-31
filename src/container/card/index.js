@@ -6,7 +6,7 @@ import ProfileContent from "../../components/cardContent";
 import ProfileFooter from "../../components/cardFooter";
 
 const Card = (props) => {
-  const { totalLikes, userDetails, postContent, comments } = props.post;
+  const { totalLikes, userDetails, postContent, commentsCount } = props?.post || {};
   const [totalLikesCount, setTotalLikes] = useState(totalLikes);
 
   const handleLikeUnlike = (actionType) => {
@@ -25,7 +25,7 @@ const Card = (props) => {
       />
       <ProfileHeader userDetails={userDetails} />
       <ProfileContent postContent={postContent} />
-      <ProfileFooter comments={comments} />
+      <ProfileFooter commentsCount={commentsCount} />
     </div>
   );
 };

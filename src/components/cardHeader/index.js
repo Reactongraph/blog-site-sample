@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ProfileHeader = ({ userDetails }) => {
-  const { lastSeen, name, picture } = userDetails;
+  const { lastSeen, name, picture } = userDetails || {};
   return (
-    <>
       <div className="cardHeader">
         <ul className="headerNav">
           <li>
@@ -20,7 +19,6 @@ const ProfileHeader = ({ userDetails }) => {
           </li>
         </ul>
       </div>
-    </>
   );
 };
 

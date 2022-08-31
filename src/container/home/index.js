@@ -29,9 +29,7 @@ const Home = () => {
               useWindow={true}
             >
               {cardList.map((data, ind) => (
-                <div key={ind}>
-                  <Card post={data} />
-                </div>
+                <Card post={data} key={ind} />
               ))}
             </InfiniteScroll>
           </div>

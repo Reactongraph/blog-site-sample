@@ -10,7 +10,7 @@ export const POST = {
     image: "https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg",
     viewCount: 249.6,
   },
-  comments: 325,
+  commentsCount: 325,
   userDetails: {
     name: "Damon Salvatore",
     lastSeen: "13 hour ago",

@@ -1,13 +1,11 @@
 import React from "react";
 
-const cardLoader=()=> {
+const cardLoader = () => {
   return (
-    <>
-      <div className="loader" key={0}>
-        Loading ...
-      </div>
-    </>
+    <div className="loader" key={0}>
+      Loading ...
+    </div>
   );
-}
+};
 
 export default cardLoader;

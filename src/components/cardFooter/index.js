@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ProfileFooter = ({ comments }) => {
+const ProfileFooter = ({ commentsCount }) => {
   return (
     <>
       <div className="cardFooter">
         <ul className="sharingNav">
           <li>
             <a href="/" className="sharingContentBox">
-              <i className="fa fa-comments"></i>{" "}
-              <span>{comments} comments</span>
+              <i className="fa fa-comments"></i>
+              <span>{commentsCount} comments</span>
             </a>
           </li>
           <li>
@@ -27,11 +27,11 @@ const ProfileFooter = ({ comments }) => {
 };
 
 ProfileFooter.propTypes = {
-  comments: PropTypes.number,
+  commentsCount: PropTypes.number,
 };
 
 ProfileFooter.defaultProps = {
-  comments: 0,
+  commentsCount: 0,
 };
 
 export default ProfileFooter;

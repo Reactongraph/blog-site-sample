@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ProfileContent = ({ postContent }) => {
-  const { title, detail, image, description, viewCount } = postContent;
+  const { title, detail, image, description, viewCount } = postContent || {};
   return (
-    <>
       <div className="cardBody">
         <h2 className="bodyHeader">{title}</h2>
         <div className="bodyContent">
@@ -19,7 +18,6 @@ const ProfileContent = ({ postContent }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
