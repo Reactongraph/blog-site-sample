@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./container/home";
 
-function App() {
+const App = () => {
   return (
     <>
       <div className="cardMainWrapper mt-5">
@@ -11,6 +11,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

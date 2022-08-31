@@ -3,7 +3,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import Card from "../card";
 import { POST_DATA, POST } from "./data";
 
-function Home() {
+const Home = () => {
   const [cardList, setCard] = useState(POST_DATA);
 
   // function that loads at scroll at end of window
@@ -28,8 +28,8 @@ function Home() {
               }
               useWindow={true}
             >
-              {cardList.map((data) => (
-                <Card post={data} />
+              {cardList.map((data, ind) => (
+                <Card post={data} key={ind} />
               ))}
             </InfiniteScroll>
           </div>
@@ -37,6 +37,6 @@ function Home() {
       </div>
     </>
   );
-}
+};
 
 export default Home;

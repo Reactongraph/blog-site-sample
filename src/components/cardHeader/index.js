@@ -1,18 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ProfileHeader({userDetails}) {
-  const { lastSeen, name, picture } = userDetails;
+const ProfileHeader = ({ userDetails }) => {
+  const { lastSeen, name, picture } = userDetails || {};
   return (
-    <>
       <div className="cardHeader">
         <ul className="headerNav">
           <li>
             <div className="userImg">
-              <img
-                src={picture}
-                alt="icon"
-              />
+              <img src={picture} alt="icon" />
             </div>
           </li>
           <li>
@@ -23,9 +19,8 @@ function ProfileHeader({userDetails}) {
           </li>
         </ul>
       </div>
-    </>
   );
-}
+};
 
 ProfileHeader.propTypes = {
   userDetails: PropTypes.object,
